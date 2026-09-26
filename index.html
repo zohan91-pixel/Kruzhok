@@ -4,57 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>КРУЖОК — 12 подвигов человека | Открытая группа</title>
-<meta name="description" content="Кружок — бренд открытых встреч. Продукт первого сезона: 12 подвигов человека. Раз в месяц, 1-я среда, 19-22, Калининград.">
+<meta name="description" content="Кружок — бренд открытых встреч. Продукт первого сезона: 12 подвигов человека. Раз в месяц, 19-22, Калининград.">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800&family=Montserrat:wght@400;500;700&family=Yeseva+One&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#F7F1E5;--stone:#EDE3D0;--ink:#221C12;--muted:#7A6E5A;--red:#B33A2B;--gold:#C49A3C;--line:#D8C9A8;--blue:#0D64A9;--max:1080px}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;overflow-x:clip}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;overflow-x:clip}
 .cond{font-family:'Roboto Condensed',Arial,sans-serif;font-weight:800;text-transform:uppercase;line-height:.95}
 @font-face{font-family:'Satyr SP';src:url('assets/fonts/SatyrSP.otf') format('opentype');font-display:swap}
 .satyr{font-family:'Satyr SP',Georgia,serif;font-weight:400}
 .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif}
-.topbar{background:#111;color:#fff}
+.topbar{background:#111;color:#fff;position:sticky;top:0;z-index:50}
+.topbar .inner{flex-wrap:nowrap !important}
+.topbar .inner>a:first-child{flex:0 0 auto;line-height:0}
+.topbar .inner>a:first-child img{height:30px !important;width:auto !important;max-width:42vw;display:block}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px}
+@media(max-width:800px){
+.burger{display:block}
+.hero-bg .cloud:not(.mini){display:none}
+.cal{gap:8px}
+.cal .mbtn{padding:10px 10px;font-size:12px}
+.cal .mbtn b{font-size:13px;line-height:1.2}
+.cal .mbtn span{font-size:11px;line-height:1.2}
+.topbar .inner{position:relative}
+.topbar .nav{display:none;position:absolute;top:100%;left:0;right:0;background:#111;flex-direction:column;gap:2px;padding:8px 24px 16px}
+.topbar.open .nav{display:flex}
+.topbar .nav a{padding:10px 0;border-top:1px solid #2a2a2a}
+}
+.hero-content .big{margin:0}
+@media(max-width:800px){
+.hero-content .satyr{font-size:clamp(34px,11vw,58px) !important}
+img{max-width:100%}
+}
 .topbar .inner{max-width:var(--max);margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:-apple-system,sans-serif;font-weight:900;letter-spacing:.14em;font-size:20px}
-.logo .o{color:var(--red);font-size:26px}
 .nav{display:flex;gap:18px;font-family:-apple-system,sans-serif;font-size:14px}
 .nav a{color:#ddd;text-decoration:none}.nav a:hover{color:#fff}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .hero{padding:56px 0 30px;text-align:center;position:relative}
-.kicker{font-family:-apple-system,sans-serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:10px 0;font-weight:400}
-.hero h1 b{font-weight:700}
-.hero .greek{font-size:15px;letter-spacing:.3em;color:var(--gold)}
-.lead{font-family:-apple-system,sans-serif;color:#4A4234;max-width:680px;margin:14px auto 22px;font-size:17px}
-.btn{font-family:-apple-system,sans-serif;display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:13px 28px;border-radius:999px;font-weight:600;margin:4px}
-.btn.red{background:var(--red)} .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-.columns{display:flex;gap:10px;justify-content:center;margin:26px 0;opacity:.9}
-.columns div{width:26px;height:78px;background:repeating-linear-gradient(180deg,var(--stone) 0 8px,#fff 8px 10px);border:1px solid var(--line);border-radius:4px 4px 2px 2px}
 section{padding:36px 0} h2{font-family:'Yeseva One',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,42px);text-align:center;margin:0 0 8px}
-.quote{font-family:Georgia,serif;font-size:21px}
 .sub{text-align:center;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;font-size:16px;max-width:660px;margin:0 auto 22px}
 .cal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:start}
-.detail{background:#111;color:#F3EAD8;border-radius:22px;grid-column:1/-1;display:grid;grid-template-rows:1fr;opacity:1;transform:none;transition:grid-template-rows .6s cubic-bezier(.32,.72,.24,1),opacity .45s ease,transform .5s ease}
+.detail{background:transparent;color:#2A2118;border-radius:22px;grid-column:1/-1;display:grid;grid-template-rows:1fr;opacity:1;transform:none;transition:grid-template-rows .6s cubic-bezier(.32,.72,.24,1),opacity .45s ease,transform .5s ease;box-shadow:0 0 26px 10px rgba(247,241,229,.9),inset 0 0 60px 18px rgba(247,241,229,.5);-webkit-mask-image:radial-gradient(88% 95% at 50% 50%,#000 42%,transparent 86%);mask-image:radial-gradient(88% 95% at 50% 50%,#000 42%,transparent 86%)}
+.detail h3{color:#1E160C}
+.detail p{color:#4A3F2C}
+.detail .date{color:#8A6D2B}
+.detail a{color:#1E160C !important}
 .detail.hidden{grid-template-rows:0fr;opacity:0;transform:translateY(-8px)}
-.detail-inner{overflow:hidden;min-height:0}
-.detail-pad{padding:18px 24px;min-height:196px;display:flex;flex-direction:column;justify-content:center}
+.detail-inner{overflow:hidden;min-height:0;background-color:#E8DCC2;background-image:url("assets/фон для подвигов.jfif");background-size:1200px auto;background-position:center top;background-repeat:no-repeat;border-radius:22px}
+.detail-pad{padding:18px 24px;min-height:260px;height:260px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 @media(max-width:800px){.detail-pad{min-height:220px}}
 .detail .swap{transition:opacity .35s ease,transform .38s ease}
+.feat{display:flex;gap:20px;align-items:center;text-align:left;justify-content:center}
+.feat-img{flex:0 0 210px;width:210px;max-width:210px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.feat-txt{flex:0 0 480px;min-width:0;max-width:480px}
+@media(max-width:800px){.feat-txt{flex:0 1 auto;max-width:none}}
+@media(max-width:600px){.feat{gap:12px;padding-left:0}.feat-img{flex-basis:138px;width:138px;max-width:138px}}
 .detail .swap.out-left{opacity:0;transform:translateX(-46px)}
 .detail .swap.pre-right{opacity:0;transform:translateX(46px)}
 @media(max-width:800px){.cal{grid-template-columns:repeat(2,1fr)}.nav{display:none}}
-.mbtn{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;text-align:left;font-family:-apple-system,sans-serif;transition:.15s}
-.mbtn b{display:block;font-size:15px} .mbtn span{font-size:13px;color:var(--muted)}
-.mbtn.active{border:1px solid var(--red);box-shadow:0 0 0 1px var(--red, #B33A2B),0 8px 24px rgba(179,58,43,.15)}
-.mbtn.past{opacity:.55;background:var(--stone)}
-.detail h3{margin:0 0 6px;font-size:26px} .detail p{font-family:-apple-system,sans-serif;color:#D8CFC0;margin:6px 0}
-.detail .date{font-family:-apple-system,sans-serif;color:var(--gold);font-size:14px;letter-spacing:.08em}
+@media(max-width:800px){
+#hermes,.sun-cal,.fly,.deco,.hero-bg .cloud,.cloud,.god,#price .eagle{display:none !important}
+#hosts h2,#hosts .sub{position:relative;z-index:1}
+#hosts,#calendar,.symp-full{overflow:hidden}
+.cal,.hosts,.grid3,.price,.detail,.mapcard{min-width:0;max-width:100%}
+.hero-bg{min-height:76vh}
+.hero-content{padding:48px 16px;max-width:100%}
+.detail-pad{padding:16px}
+#price .price h2{font-size:21px !important}
+#price .price p.cond{font-size:32px !important}
+.mapcard h2{font-size:26px}
+.mapcard p{font-size:16px}
+}
+@media(max-width:1100px){#hermes,.sun-cal,.fly,.deco,.hero-bg .cloud,.cloud,.god,#price .eagle{display:none !important}}
+.mbtn{background:linear-gradient(180deg,#6E5F40,#55482E);border:1px solid #4A3F28;border-radius:16px;padding:16px 14px;cursor:pointer;text-align:center;font-family:-apple-system,sans-serif;color:#F3EAD8;transition:.15s;box-shadow:0 6px 16px rgba(60,45,20,.25)}
+.mbtn:hover{background:linear-gradient(180deg,#C05A36,#A03A22);border-color:#8E3320;color:#fff}
+.mbtn:hover span{color:#F3D9CE}
+.mbtn b{display:flex;flex-direction:column;justify-content:center;font-size:15px;line-height:1.2;min-height:2.5em;margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;color:inherit} .mbtn span{font-size:12px;line-height:1.2;color:#CFC3A8}
+.mbtn.active{background:linear-gradient(180deg,#D8AB4E,#B8892F);border-color:#97702A;color:#2A2118;box-shadow:0 0 0 2px #97702A,0 6px 16px rgba(60,45,20,.25)}
+.mbtn.active span{color:#5A4A22}
+.mbtn.past{opacity:.6;background:var(--stone);border-color:var(--line);color:var(--muted);box-shadow:none}
+.mbtn.past span{color:var(--muted)}
+.detail h3{margin:0 0 4px;font-size:19px;line-height:1.2;color:#1E160C} .detail p{font-family:-apple-system,sans-serif;color:#4A3F2C;margin:4px 0;line-height:1.4}
+.detail .date{font-family:-apple-system,sans-serif;color:#8A6D2B;font-size:14px;letter-spacing:.08em}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 @media(max-width:800px){.grid3{grid-template-columns:1fr}}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
 .card h3{font-family:-apple-system,sans-serif;margin:0 0 8px;font-size:17px}
 .card p{font-family:-apple-system,sans-serif;color:#5A5346;font-size:15px;margin:0}
 .symp-full{position:relative;isolation:isolate;max-width:100%}
+#project{position:relative;isolation:isolate}
+#project::before{content:"";position:absolute;inset:0;background:url("assets/храм олимп.jfif") center top/cover no-repeat;opacity:.3;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
 .symp-full h2,.symp-full .sub,.symp-full .grid3{position:relative;z-index:1}
 .symp-full::before{content:"";position:absolute;inset:0;background:url("assets/Симпосиум.jpg") center center/cover no-repeat;opacity:.10;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent)}
 .hosts{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
@@ -72,43 +111,51 @@ section{padding:36px 0} h2{font-family:'Yeseva One',Georgia,serif;font-weight:40
 .price .money{position:absolute;right:-170px;bottom:0;height:100%;opacity:.4;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%)}
 .price .lion{position:absolute;left:-24px;bottom:0;height:100%;opacity:.45;pointer-events:none;-webkit-mask-image:linear-gradient(-90deg,transparent,#000 45%);mask-image:linear-gradient(-90deg,transparent,#000 45%)}
 .price>*:not(.money):not(.lion){position:relative;z-index:1}
-@media(max-width:800px){.price .money{height:100%;opacity:.3}}
+@media(max-width:800px){.price .money{display:none !important}.price .lion{left:0;right:0;width:100%;height:100%;object-fit:cover;opacity:.28;-webkit-mask-image:none;mask-image:none}}
 footer{border-top:1px solid var(--line);margin-top:20px;padding:24px 0 50px;text-align:center;color:var(--muted);font-family:-apple-system,sans-serif;font-size:13px}
-.note{font-family:-apple-system,sans-serif;font-size:13px;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:12px;padding:10px 14px;margin-top:12px}
-.hero-bg{position:relative;border-radius:0;overflow:hidden;margin:0;border:0;min-height:88vh;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:relative;border-radius:0;overflow:hidden;margin:0;border:0;min-height:78vh;display:flex;align-items:center;justify-content:center}
 .hero-bg img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;display:block}
 .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(20,15,5,.55) 0%,rgba(20,15,5,.25) 45%,rgba(0,0,0,.1) 70%,rgba(0,0,0,.55) 100%);pointer-events:none}
 .hero-content{position:relative;z-index:3;text-align:center;color:#fff;padding:70px 20px;width:100%;text-shadow:0 2px 24px rgba(0,0,0,.65),0 1px 2px rgba(0,0,0,.9)}
 .hero-content .satyr{font-family:'Satyr SP',Georgia,serif;font-weight:400}
 .hero-bullets{font-family:Montserrat,sans-serif;font-size:15px;line-height:1.7;margin:14px auto;max-width:520px;padding:0;border:0;background:none}
-.hero-content .big{font-size:clamp(64px,14vw,180px);color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.35)}
-.hero-content .mid{font-size:clamp(36px,7vw,84px);color:#fff}
+.hero-content .big{font-size:clamp(24px,5.25vw,68px);color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.35)}
 .hero-content .dates{font-family:Montserrat,sans-serif;font-size:15px;letter-spacing:.12em;margin:10px 0}
-.hero-bullets{font-family:Montserrat,sans-serif;font-size:15px;line-height:1.7;margin:14px auto;max-width:520px}
-.hero-bullets .hl{background:var(--blue);padding:2px 8px;display:inline-block;margin-top:8px}
-.cta-btn{display:inline-block;margin-top:16px;background:#fff;color:#111;font-family:Montserrat,sans-serif;font-weight:700;padding:14px 34px;border-radius:999px;text-decoration:none}
-.plaque-btn{display:inline-block;margin-top:18px;width:min(280px,72vw);height:76px;line-height:72px;text-align:center;text-decoration:none;font-family:'Roboto Condensed',Arial,sans-serif;font-weight:800;font-size:21px;letter-spacing:.14em;color:#2A2118;background:url("assets/PNG/UI UX/Ui22.png") no-repeat center center;background-size:100% 100%;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35));transition:.2s}
+.plaque-btn{display:inline-block;margin-top:18px;width:min(280px,72vw);height:76px;line-height:76px;text-align:center;text-decoration:none;font-family:'Satyr SP',Georgia,serif !important;font-weight:400 !important;font-size:28px;letter-spacing:.06em;color:#2A2118;text-shadow:none !important;background:url("assets/PNG/UI UX/Ui22.png") no-repeat center center;background-size:100% 100%;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35));transition:.2s}
+.hero-content .plaque-btn{text-shadow:none !important}
 .plaque-btn:hover{transform:translateY(-2px);filter:drop-shadow(0 10px 22px rgba(0,0,0,.4))}
 .cloud{position:absolute;pointer-events:none;mix-blend-mode:screen;opacity:.95;will-change:transform;z-index:2}
 .deco{position:absolute;pointer-events:none;z-index:2;animation:bob 5.5s ease-in-out infinite}
 .deco.fly{animation:none;will-change:transform}
 .sun-spin{animation:spin 90s linear infinite}
+#calendar .sun-cal{z-index:0}
+#calendar>div:not(#hermes){position:relative;z-index:1}
 @keyframes spin{to{transform:rotate(360deg)}}
 #price,#contact{position:relative}
+.mapsec{position:relative;max-width:100%;margin:20px 0 0}
+.mapsec iframe{width:100%;height:440px;border:0;display:block;filter:grayscale(.35)}
+.mapcover{position:absolute;left:0;right:0;top:0;height:440px;cursor:grab}
+@media(max-width:800px){.mapcover{height:300px}}
+.mapcard{position:absolute;left:max(24px,calc((100% - 1080px)/2 + 24px));top:50%;transform:translateY(-50%);background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 30px;max-width:340px;box-shadow:0 12px 40px rgba(0,0,0,.14);text-align:left}
+.mapcard h2{text-align:left;font-size:30px}
+.mapcard p{font-family:-apple-system,sans-serif;color:#222;margin:10px 0;font-size:17px;line-height:1.55}
+.mapcard p.big{font-size:20px}
+.mapcard a{color:inherit;text-decoration:none}
+@media(hover:hover){.mapcard a[href^="tel:"]{pointer-events:none}}
+@media(max-width:800px){.mapsec iframe{height:300px}.mapcard{position:static;transform:none;max-width:none;margin:0 16px 16px}}
 #calendar{position:relative}
 #hermes{position:absolute;left:0;top:0;width:300px;z-index:8;pointer-events:none;transform:translateX(-115%) rotate(20deg);transition:transform .5s cubic-bezier(.32,.72,.24,1);will-change:transform,top}
 #hermes.in{transform:translateX(-35%) rotate(20deg)}
 #hermes img{width:100%;display:block;animation:bob 3.2s ease-in-out infinite}
 #hermes .hcloud{position:absolute;left:calc(80% - 30px);top:78%;width:300px;max-width:none;margin-top:-30px;transform:translate(-50%,-50%) rotate(-20deg);opacity:.55;z-index:-1;animation:bob2 4.3s ease-in-out -2.1s infinite}
 @keyframes bob2{0%,100%{transform:translate(-50%,-51%) rotate(-20deg)}50%{transform:translate(-50%,-47%) rotate(-20deg)}}
-@keyframes bob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(2.5px)}}
 @media(max-width:800px){#hermes{width:120px}}
-@keyframes drift{from{transform:translateX(-30%)}to{transform:translateX(30%)}}
-.hero-text{position:relative;padding:28px 0 6px}
+body,h1,h2,h3,h4,p,div,span,a,button,input,textarea,summary,small{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif !important}
+.hero-content .satyr{font-family:'Satyr SP',Georgia,serif !important}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="inner"><a href="#" style="display:flex;align-items:center"><img src="assets/КРУЖОК Белый.png" alt="КРУЖОК" style="height:34px;display:block"></a><div class="nav"><a href="#about">О группе</a><a href="#calendar">Календарь 12</a><a href="#hosts">Ведущие</a><a href="#price">Стоимость</a><a href="#contact">Контакт</a></div><a href="https://t.me/rukosuev_psy" target="_blank" class="sans" style="color:#fff;text-decoration:none;font-size:14px">Записаться →</a></div></div>
+<div class="topbar"><div class="inner"><a href="#" style="display:flex;align-items:center"><img src="assets/КРУЖОК Белый.png" alt="КРУЖОК" style="height:34px;display:block"></a><div class="nav"><a href="#calendar">Календарь</a><a href="#about">О группе</a><a href="#hosts">Ведущие</a><a href="#price">Стоимость</a><a href="#project">О проекте</a><a href="#contact">Контакты</a></div><button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button></div></div>
 <div class="wrap" style="max-width:100%;padding:0">
 <div class="hero" style="padding:0">
 <div class="hero-bg">
@@ -118,24 +165,24 @@ footer{border-top:1px solid var(--line);margin-top:20px;padding:24px 0 50px;text
 <img class="cloud" data-speed="0.7" src="assets/PNG/Облако5.png" alt="" style="top:48%;left:5%;width:260px;opacity:.85">
 <div class="hero-content">
 <div class="cond big">КРУЖОК</div>
-<div class="satyr" style="font-size:clamp(44px,8vw,96px);line-height:1;color:#fff">12 подвигов человека</div>
-<div class="dates">04.11.2026 – 06.10.2027</div>
+<div class="satyr" style="font-size:clamp(38px,6.9vw,83px);line-height:1;color:#fff">12 подвигов человека</div>
+<div class="dates">12.11.2026 – 14.10.2027</div>
 <div class="hero-bullets">12 вечеров в Калининграде<br>Мифы, которые даруют свободу<br>Тёплый круг вместо бара</div>
-<div><a class="plaque-btn" href="https://t.me/rukosuev_psy" target="_blank">ЗАПИСАТЬСЯ</a></div>
+<div><a class="plaque-btn" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">ЗАПИСАТЬСЯ</a></div>
+</div>
+</div>
 </div>
 </div>
 <section id="calendar" style="max-width:100%">
 <div id="hermes"><img class="hcloud" src="assets/PNG/Облака.png" alt=""><img src="assets/PNG/Гермес.png" alt="Гермес летит"></div>
-<img class="deco sun-spin" src="assets/PNG/Солнце.png" alt="" style="top:4px;right:2%;width:192px;opacity:.95">
-<img class="deco fly" data-speed="-0.32" data-drop="0.32" data-rot="16" src="assets/PNG/Сокол.png" alt="" style="top:150px;right:-312px;width:112px">
+<img class="deco sun-spin sun-cal" src="assets/PNG/Солнце.png" alt="" style="top:4px;right:2%;width:192px;opacity:.95">
+<img class="deco fly" data-speed="-0.32" data-drop="0.32" data-rot="16" src="assets/PNG/Сокол.png" alt="" style="top:100px;right:-312px;width:112px">
 <div style="max-width:1080px;margin:0 auto;padding:0 24px">
 <h2>12 месяцев — 12 историй</h2>
 <p class="sub">Выбери свой вечер. Нажми на месяц — увидишь, о чём будем говорить. Прошедшие остаются тёплым следом, будущие ждут тебя.</p>
 <div class="cal" id="cal"></div>
 </div>
 </section>
-<div class="wrap" style="max-width:1080px;margin:0 auto;padding:0 24px">
-</div>
 <div class="symp-full">
 <img class="deco fly" data-sect=".symp-full" data-dist="420" src="assets/PNG/Ласточка.png" alt="" style="top:64px;left:62%;width:72px;opacity:.9;z-index:0">
 <div style="max-width:1080px;margin:0 auto;padding:0 24px">
@@ -171,6 +218,7 @@ footer{border-top:1px solid var(--line);margin-top:20px;padding:24px 0 50px;text
 <div class="host"><div class="ava"><img class="photo" src="assets/рукосуев.jpg" alt="Александр Рукосуев"></div><h3 class="sans">Александр Рукосуев</h3><p class="sans" style="color:var(--muted)">Практикующий психолог, гештальт-терапевт, МГИ. 4 года ведёт частную практику и группы. Держит так, что комфортно даже молчать.</p></div>
 <div class="host"><div class="ava"><img class="photo" src="assets/шепелев.jpg" alt="Евгений Шепелев" style="object-position:50% 15%"></div><h3 class="sans">Евгений Шепелев</h3><p class="sans" style="color:var(--muted)">Практикующий психолог, гештальт-терапевт, МГИ. 4 года ведёт частную практику и группы. Умеет задать вопрос, после которого всё становится ясно.</p></div>
 </div>
+</div>
 </section>
 <div class="wrap" style="max-width:1080px;margin:0 auto;padding:0 24px">
 
@@ -183,48 +231,60 @@ footer{border-top:1px solid var(--line);margin-top:20px;padding:24px 0 50px;text
 <h2 class="cond" style="margin:0;font-size:42px;color:#fff">СТОИМОСТЬ УЧАСТИЯ</h2>
 <p class="cond" style="font-size:64px;margin:10px 0;color:#fff">1000р <span style="font-size:15px;font-weight:400;letter-spacing:0;font-family:Montserrat,sans-serif">/ одна встреча</span></p>
 <p style="color:#D8CFC0;margin:0">19:00–22:00 • Больничная, 42<br>места ограничены</p>
-<div style="margin-top:16px"><a class="plaque-btn" href="https://t.me/rukosuev_psy" target="_blank">ЗАПИСАТЬСЯ</a></div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Контакты</h2>
-<p class="sub">📍 Больничная, 42, Калининград</p>
-<div class="hosts">
-<div class="card" style="text-align:center"><h3>Александр Рукосуев</h3><p>📞 <a href="tel:+79291696777">8 929 169-67-77</a><br>💬 <a href="https://t.me/rukosuev_psy" target="_blank">@rukosuev_psy</a></p></div>
-<div class="card" style="text-align:center"><h3>Евгений Шепелев</h3><p>📞 <a href="tel:+79527952360">+7 952 795-23-60</a><br>💬 <a href="https://t.me/eashepelev" target="_blank">@eashepelev</a></p></div>
+<div style="margin-top:16px"><a class="plaque-btn" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">ЗАПИСАТЬСЯ</a></div>
 </div>
 </section>
 </div>
-<footer>© КРУЖОК • 12 подвигов человека • сезон 04.11.2026 – 06.10.2027 • Калининград</footer>
+<section id="project" style="max-width:100%">
+<div style="max-width:1080px;margin:0 auto;padding:20px 24px;text-align:left">
+<h2 style="text-align:left;margin:0 0 10px">О проекте</h2>
+<p class="sans" style="max-width:920px;margin:0 0 10px;color:#4A4234">В эпоху информационного шума каждый из нас закрывается в своей комнате. Контакт между людьми становится редкостью. А без него — выгорание, тревога, потеря смысла.</p>
+<p class="sans" style="max-width:920px;margin:0 0 10px;color:#4A4234">Мы предлагаем другой путь: живое общение в малой группе, где каждый может высказаться и быть услышанным.</p>
+<p class="sans" style="max-width:920px;margin:0 0 10px;color:#4A4234">Встречи проходят как глубокие разговоры о том, что действительно важно. Почему мы делаем то, что делаем? Кто решает, как должна выглядеть наша жизнь? Как выстроить жизнь так, чтобы она была своей, а не транслируемой?</p>
+<p class="sans" style="max-width:920px;margin:0 0 16px;color:#4A4234">Гештальт-подход, на котором мы основываемся, помогает каждому найти собственные ответы вместо того, чтобы следовать готовым решениям. Участники уходят с чётким внутренним компасом.</p>
+<div><a href="https://t.me/gestalt39" target="_blank" class="sans" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:linear-gradient(180deg,#FDFBF4,#ECE2CC);border:1px solid #D8C9A8;border-radius:16px;padding:10px 26px 10px 12px;font-weight:700;color:var(--ink);box-shadow:0 5px 0 #CBBB96,0 12px 24px rgba(60,45,20,.25),inset 0 1px 0 #fff"><img src="assets/PNG/ТГ.png" alt="" style="width:42px;height:42px;border-radius:50%">Присоединиться</a></div>
+</div>
+</section>
+<div class="mapsec" id="contact">
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab94d1fb7f4c7184bf7573de4326ab864f61415ca6296aa41553ad0cd635e9926&amp;source=constructor" loading="lazy" title="Карта — Больничная 42"></iframe>
+<div class="mapcover" id="mapcover"></div>
+<div class="mapcard">
+<h2>Наши контакты</h2>
+<p style="font-size:15px">г. Калининград,<br>ул. Больничная, 42, каб. 208</p>
+<p><b>Александр Рукосуев</b><br><span class="big"><a href="tel:+79291696777">8 929 169-67-77</a></span><br><a href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">@rukosuev_psy</a></p>
+<p><b>Евгений Шепелев</b><br><span class="big"><a href="tel:+79527952360">+7 952 795-23-60</a></span><br><a href="https://t.me/eashepelev" target="_blank">@eashepelev</a></p>
+</div>
+</div>
+<div class="wrap" style="max-width:1080px;margin:0 auto;padding:0 24px">
+</div>
+<footer>© КРУЖОК • 12 подвигов человека • сезон 12.11.2026 – 14.10.2027 • Калининград</footer>
 <script>
 const feats=[
-{d:"2026-11-04",t:"№1 Немейский лев",s:"Про злость, которая тебя защищает",x:"Ярость, страсть и желания — дикие и неукротимые. Поговорим — и станет ясно, что с этим делать."},
-{d:"2026-12-02",t:"№2 Лернейская гидра",s:"Про то, что никак не отпускает",x:"Тревога и привычки, которые возвращаются. Разберём, что ходит по кругу — и как выйти."},
-{d:"2027-01-06",t:"№3 Керинейская лань",s:"Про нежное, которое боишься спугнуть",x:"Мечта и хрупкое важное. Её нельзя хватать — только бережно приблизиться."},
-{d:"2027-02-03",t:"№4 Эриманфский вепрь",s:"Про силу, которую надо удержать",x:"В тебе много силы — как её не расплескать и не разрушить? Начнём год с разговора про выдержку и опору."},
-{d:"2027-03-03",t:"№5 Авгиевы конюшни",s:"Про завал, в котором застрял",x:"Завал, в котором застрял. Не выгребать лопатой — сменить русло реки."},
-{d:"2027-04-07",t:"№6 Стимфалийские птицы",s:"Про шум в голове",x:"Шум тревожных мыслей в голове. Поговорим — и станет тише."},
-{d:"2027-05-05",t:"№7 Критский бык",s:"Про страсть и тело",x:"Дикое желание: приручить, а не подавить. Откровенно и без стыда."},
-{d:"2027-06-02",t:"№8 Кони Диомеда",s:"Про то, что тебя съедает",x:"Работа и злость, которые тебя съедают. Как перестать кормить их собой."},
-{d:"2027-07-07",t:"№9 Пояс Ипполиты",s:"Про встречи с другими",x:"Любовь, границы, уважение. Как не воевать, а договариваться."},
-{d:"2027-08-04",t:"№10 Коровы Гериона",s:"Про долгую дорогу за своим",x:"Долгая дорога за своим. Для тех, кто идёт — и иногда хочет сдаться."},
-{d:"2027-09-01",t:"№11 Яблоки Гесперид",s:"Про плоды и право взять своё",x:"Ты много сделал — умеешь ли брать? Про итоги и право на своё."},
-{d:"2027-10-06",t:"№12 Цербер",s:"Финал. Про глубину и возвращение",x:"Финал сезона. Спускаемся к страхам и тени — возвращаемся с ясностью."}
+{d:"2026-11-12",t:"№1 Немейский лев",img:"assets/ПНГ подвиги/1 Лев.webp",s:"Про злость, которая тебя защищает",x:"Ярость, страсть и желания — дикие и неукротимые."},
+{d:"2026-12-10",t:"№2 Лернейская гидра",img:"assets/ПНГ подвиги/2 гидра.webp",s:"Про то, что никак не отпускает",x:"Страхи множатся, если их не остановить."},
+{d:"2027-01-07",t:"№3 Керинейская лань",img:"assets/ПНГ подвиги/3 лань.webp",s:"Про нежное, которое боишься спугнуть",x:"Погоня за недостижимым требует терпения."},
+{d:"2027-02-04",t:"№4 Эриманфский вепрь",img:"assets/ПНГ подвиги/4 вепрь.webp",s:"Про силу, которую надо удержать",x:"Укрощение грубой силы через выдержку."},
+{d:"2027-03-04",t:"№5 Авгиевы конюшни",img:"assets/ПНГ подвиги/5 конюшни.webp",s:"Про завал, в котором застрял",x:"Иногда хаос очищается радикальным решением."},
+{d:"2027-04-01",t:"№6 Стимфалийские птицы",img:"assets/ПНГ подвиги/6 птицы.webp",s:"Про шум в голове",x:"Навязчивые мысли отравляют внутреннее пространство."},
+{d:"2027-05-13",t:"№7 Критский бык",img:"assets/ПНГ подвиги/7 бык.webp",s:"Про страсть и тело",x:"Необузданная энергия требует контроля."},
+{d:"2027-06-10",t:"№8 Кони Диомеда",img:"assets/ПНГ подвиги/8 кони.webp",s:"Про то, что тебя съедает",x:"Жестокость, которую человек сам в себе кормит."},
+{d:"2027-07-08",t:"№9 Пояс Ипполиты",img:"assets/ПНГ подвиги/10 Пояс.webp",s:"Про встречи с другими",x:"Сила превращается в конфликт из-за недоверия."},
+{d:"2027-08-05",t:"№10 Коровы Гериона",img:"assets/ПНГ подвиги/9 Коровы.webp",s:"Про долгую дорогу за своим",x:"Добыча ценой преодоления огромного расстояния."},
+{d:"2027-09-02",t:"№11 Яблоки Гесперид",img:"assets/ПНГ подвиги/11 Яблоки.webp",s:"Про плоды и право взять своё",x:"Желание невозможного требует хитрости и терпения."},
+{d:"2027-10-14",t:"№12 Цербер",img:"assets/ПНГ подвиги/12 Цербер.webp",s:"Финал. Про глубину и возвращение",x:"Спуск во тьму и возвращение победителем."}
 ];
 const cal=document.getElementById('cal');
 const det=document.createElement('div');
 det.className='detail';det.id='detail';
 const today=new Date().toISOString().slice(0,10);
-let cur=0;
-if(today>"2026-12-02"){let i=feats.findIndex(f=>f.d>=today); cur=i===-1?11:i;}
+let cur=-1;
 function cols(){return window.innerWidth>800?4:2;}
 let btns=[];
 function build(){
 cal.innerHTML='';btns=[];
 feats.forEach((f,i)=>{
 const b=document.createElement('button');
-b.innerHTML='<b>'+f.t+'</b><span>'+f.d.split('-').reverse().join('.')+'</span>';
+b.innerHTML='<b>'+f.t.replace(/^№\d+ /,'').replace(' ','<br>')+'</b><span>'+f.d.split('-').reverse().join('.')+'</span>';
 b.onclick=function(){select(i);};
 btns.push(b);cal.appendChild(b);
 });
@@ -238,12 +298,11 @@ b.className='mbtn sans'+(i===cur?' active':'')+(past?' past':'');
 }
 function fillDet(){
 const f=feats[cur];
-det.innerHTML='<div class="detail-inner"><div class="detail-pad"><div class="swap"><div class="date sans">'+f.d.split('-').reverse().join('.')+' • 19:00–22:00 • Больничная, 42</div><h3>'+f.t+'</h3><p>'+f.x+'</p><p style="margin-top:12px"><a href="https://t.me/rukosuev_psy" target="_blank" style="color:#fff">Записаться →</a></p></div></div></div>';
+det.innerHTML='<div class="detail-inner"><div class="detail-pad"><div class="swap"><div class="feat"><img class="feat-img" src="'+f.img+'" alt=""><div class="feat-txt" style="text-align:center"><div class="date sans">'+f.d.split('-').reverse().join('.')+'</div><h3>'+f.t.replace(/^№\d+ /,'')+'</h3><p>'+f.x+'</p><p style="margin-top:12px"><a href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank" style="color:#1E160C">Записаться →</a></p></div></div></div></div></div>';
 }
 function placeDet(){
 const c=cols(), row=Math.floor(cur/c), pos=Math.min((row+1)*c,feats.length);
 cal.appendChild(det);
-btns.forEach((b,i)=>{});
 const kids=[...cal.children].filter(n=>n!==det);
 cal.innerHTML='';
 kids.forEach((b,i)=>{cal.appendChild(b);if(i===pos-1)cal.appendChild(det);});
@@ -273,9 +332,14 @@ requestAnimationFrame(function(){det.classList.remove('hidden');});
 });
 },300);
 }
-function render(){refreshBtns();fillDet();placeDet();det.classList.remove('hidden');}
+function render(){refreshBtns();if(cur<0){det.classList.add('hidden');if(det.parentNode)det.parentNode.removeChild(det);return;}fillDet();placeDet();det.classList.remove('hidden');}
 build();render();
+window.addEventListener('load',function(){feats.forEach(function(f){var im=new Image();im.src=f.img;});});
 let rT;window.addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(render,200);});
+// бургер-меню на мобилке
+const burger=document.getElementById('burger');
+if(burger){burger.addEventListener('click',function(){burger.closest('.topbar').classList.toggle('open');});
+document.querySelectorAll('.topbar .nav a').forEach(function(a){a.addEventListener('click',function(){burger.closest('.topbar').classList.remove('open');});});}
 // облака едут только от скролла — длинный маршрут без перескоков
 const clouds=document.querySelectorAll('.cloud');
 let tick=false;
@@ -311,7 +375,7 @@ const hermes=document.getElementById('hermes');
 function hermesVis(){
 const cal=document.getElementById('calendar');
 if(!cal||!hermes)return;
-const r=cal.getBoundingClientRect(), vh=window.innerHeight;
+const r=cal.getBoundingClientRect(),vh=window.innerHeight;
 const inView=r.top<vh*0.92&&r.bottom>vh*0.08;
 hermes.classList.toggle('in',inView);
 if(inView){
@@ -323,6 +387,10 @@ hermes.style.top=(prog*maxTop)+'px';
 window.addEventListener('scroll',function(){requestAnimationFrame(hermesVis);},{passive:true});
 window.addEventListener('resize',hermesVis);
 hermesVis();
+// шторка карты: колесо всегда крутит страницу, клик отдаёт управление карте
+const mc=document.getElementById('mapcover');
+if(mc){mc.addEventListener('click',function(){mc.style.display='none';});
+document.querySelector('.mapsec').addEventListener('mouseleave',function(){mc.style.display='';});}
 </script>
 </body>
 </html>
