@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>КРУЖОК — 12 подвигов человека | Открытая группа</title>
 <meta name="description" content="Кружок — бренд открытых встреч. Продукт первого сезона: 12 подвигов человека. Раз в месяц, 19-22, Калининград.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23B33A2B'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='%23F7F1E5' font-family='Georgia,serif'%3EК%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="КРУЖОК — 12 подвигов человека | Открытая группа">
+<meta property="og:description" content="Кружок — бренд открытых встреч. Продукт первого сезона: 12 подвигов человека. Раз в месяц, 19-22, Калининград.">
+<meta property="og:url" content="https://www.kruzhok39.ru/">
+<meta property="og:image" content="https://www.kruzhok39.ru/assets/hero-bg.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/hero-bg.webp" fetchpriority="high">
@@ -46,7 +54,7 @@ img{max-width:100%}
 .nav a{color:#ddd;text-decoration:none}.nav a:hover{color:#fff}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .hero{padding:56px 0 30px;text-align:center;position:relative}
-section{padding:72px 0;scroll-margin-top:72px} h2{font-family:'Yeseva One',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,42px);line-height:1.15;text-align:center;margin:0 0 8px;color:var(--ink)}
+section{padding:48px 0;scroll-margin-top:72px}#contact{scroll-margin-top:70px} h2{font-family:'Yeseva One',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,42px);line-height:1.15;text-align:center;margin:0 0 8px;color:var(--ink)}
 h3{line-height:1.25}
 .sub{text-align:center;color:var(--muted);font-family:'Montserrat',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.6;max-width:660px;margin:0 auto 28px}
 .cal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start;max-width:860px;margin:0 auto}
@@ -135,9 +143,7 @@ h3{line-height:1.25}
 .pstep.active .pic{color:var(--red)}
 .symp-evening{position:relative;isolation:isolate;max-width:100%}
 #project{position:relative;isolation:isolate}
-#project::before{content:"";position:absolute;inset:0;background:url("assets/olymp.webp") center top/cover no-repeat;opacity:.3;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
 .symp-evening h2,.symp-evening .sub{position:relative;z-index:1}
-.symp-evening::before{content:"";position:absolute;inset:0;background:url("assets/symposium.webp") center center/cover no-repeat;opacity:.10;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent)}
 .hosts{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch;position:relative;z-index:1;max-width:864px;margin:0 auto}
 #hosts{position:relative}
 @media(max-width:800px){.hosts{grid-template-columns:1fr}}
@@ -158,7 +164,7 @@ h3{line-height:1.25}
 .hwrite{display:block;width:96px;box-sizing:border-box;text-align:center;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:var(--red);border:1px solid var(--red-dark);border-radius:0;padding:8px 6px;white-space:nowrap;transition:.15s}
 .hwrite:hover{background:var(--red-dark);border-color:var(--red-dark);box-shadow:var(--shadow)}
 @media(max-width:800px){.host{gap:14px;padding:16px}.host .side{flex-basis:88px}.host .ava,.ava .photo{flex-basis:84px;width:84px;height:84px;flex-grow:0}.hicons a{width:36px;height:36px;border-radius:8px}.hwrite{width:80px;font-size:11px;padding:6px 4px}}
-.price{background:var(--stone);border:1px solid var(--line);border-radius:22px;padding:28px;text-align:center;font-family:'Montserrat',sans-serif;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.price{background:var(--stone);border:1px solid var(--line);border-radius:22px;padding:28px;text-align:center;font-family:'Montserrat',sans-serif;position:relative;overflow:hidden;box-shadow:var(--shadow);max-width:864px;margin-left:auto;margin-right:auto}
 .price .money{position:absolute;right:-170px;bottom:0;height:100%;width:auto;opacity:.4;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%)}
 .price .lion{position:absolute;left:-24px;bottom:0;height:100%;width:auto;opacity:.45;pointer-events:none;-webkit-mask-image:linear-gradient(-90deg,transparent,#000 45%);mask-image:linear-gradient(-90deg,transparent,#000 45%)}
 .price>*:not(.money):not(.lion){position:relative;z-index:1}
@@ -209,13 +215,36 @@ footer nav a:hover{color:var(--red)}
 @media(hover:hover){.mapcard a[href^="tel:"]{pointer-events:none}}
 @media(max-width:800px){.mapsec iframe{height:300px}.mapcard{position:static;transform:none;max-width:none;margin:0 16px 16px}}
 body,h1,h2,h3,h4,p,div,span,a,button,input,textarea,summary,small{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif !important}
-h2,.cond,.hero-title,.plaque-btn{font-family:'Yeseva One',Georgia,serif !important}
+h2,.cond,.hero-title,.plaque-btn,.proj-hook .lead,.proj-final p,.proj-about .lead{font-family:'Yeseva One',Georgia,serif !important}
+.proj-top{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px}
+.proj-hook{padding:8px 0}
+.proj-hook .lead{font-size:22px;line-height:1.3;margin:0 0 10px;color:var(--ink)}
+.proj-hook p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.proj-about{padding:8px 0}
+.proj-about .lead{font-size:22px;line-height:1.3;margin:0 0 10px;color:var(--ink)}
+.proj-about p{margin:0 0 10px;color:var(--muted);font-size:15px;line-height:1.6}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 16px}
+.proj-card{padding:6px 24px;text-align:left}
+.proj-card+.proj-card{border-left:1px solid var(--line)}
+.proj-ico{display:flex;align-items:center;justify-content:center;color:#161210;margin:0 auto 12px}
+.proj-ico svg{width:30px;height:30px}
+.proj-card h4{margin:0 0 6px;font-size:15px}
+.proj-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.proj-final{padding:12px 0 4px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.proj-final p{margin:0;font-size:clamp(15px,2vw,19px);line-height:1.55;max-width:620px;flex:none}
+@media(max-width:800px){.proj-top{grid-template-columns:1fr}.proj-grid{grid-template-columns:1fr 1fr;gap:24px 0}.proj-card+.proj-card{border-left:0}}
+@media(max-width:520px){.proj-grid{grid-template-columns:1fr}}
+.duo{position:relative;isolation:isolate}
+.duo::before{content:"";position:absolute;inset:0;background-position:center top;background-size:cover;background-repeat:no-repeat;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(180deg,transparent,#000 4%,#000 96%,transparent)}
+#about{position:relative;isolation:isolate}
+#about::before{content:"";position:absolute;inset:0;background-image:url("assets/bg-about.webp");background-position:center top;background-size:cover;background-repeat:no-repeat;opacity:.16;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent)}
+.duo-price::before{background-image:url("assets/olymp.webp");opacity:.22}
 .blurup{filter:blur(14px);transform:scale(1.05);transition:filter .5s ease,transform .5s ease}
 .blurup.sharp{filter:none;transform:none}
 </style>
 </head>
 <body>
-<div class="topbar" id="topbar"><div class="inner"><a href="#" style="display:flex;align-items:center"><img src="assets/logo.webp" alt="КРУЖОК" width="125" height="30" decoding="async" style="height:34px;width:auto;display:block"></a><div class="nav"><a href="#about">О группе</a><a href="#calendar">Календарь</a><a href="#hosts">Ведущие</a><a href="#price">Стоимость</a><a href="#contact">Контакты</a><a class="topbar-cta" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">Записаться</a></div><button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button></div></div>
+<div class="topbar" id="topbar"><div class="inner"><a href="#" style="display:flex;align-items:center"><img src="assets/logo.webp" alt="КРУЖОК" width="125" height="30" decoding="async" style="height:34px;width:auto;display:block"></a><div class="nav"><a href="#about">О группе</a><a href="#calendar">Календарь</a><a href="#hosts">Ведущие</a><a href="#price">Стоимость</a><a href="#project">О проекте</a><a href="#contact">Контакты</a><a class="topbar-cta" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">Записаться</a></div><button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button></div></div>
 <div class="wrap" style="max-width:100%;padding:0">
 <div class="hero" style="padding:0">
 <div class="hero-bg">
@@ -240,7 +269,7 @@ h2,.cond,.hero-title,.plaque-btn{font-family:'Yeseva One',Georgia,serif !importa
 <div class="fate"><img src="data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQBQCdASoYACQAPwFsrlArJiSisA1RYCAJZwDLpBtkh0QWlWqc9Dn+GiLIaJRRnS83SsU+gADKkfKoJ74HMO+OVWegeE2wEsiYok3Qz4p/fi9oad7GeSoFpZWftxjGKnVad0JXhQU4AA==" data-src="assets/fate-3.webp" class="blurup" alt="" loading="lazy" decoding="async" width="500" height="750"><p>Вы начинали двигаться к цели — и снова находили причину остановиться</p></div>
 <div class="fate"><img src="data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBgCdASoYACQAPxF6sVIsJ6QiqqoBgCIJZQDGQBaY8zfoBUiP2WN8MKCPHTm1RCfVl/19WYQ/ApkAAP6gVgfne8iCW1uHyGMaCsrN2Ict6ajkCCPjR8RpMLCudu9GKnnE2N8F4bW92sUbuCK3MT14suYqrKNfcAA=" data-src="assets/fate-4.webp" class="blurup" alt="" loading="lazy" decoding="async" width="500" height="750"><p>Чувствуете, что приближается шторм в жизни, — и хочется пройти его бережно для себя</p></div>
 </div>
-<div style="text-align:center;margin-top:32px"><a class="fates-cta" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">Записаться</a></div>
+<div style="text-align:center;margin-top:32px"><p class="sans" style="margin:0 0 16px;color:var(--ink);font-weight:700;font-size:17px">Пройдя 12 подвигов, вы будете знать, как достичь цели.</p><a class="fates-cta" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">Записаться</a></div>
 </div>
 </section>
 <div class="symp-evening">
@@ -248,7 +277,7 @@ h2,.cond,.hero-title,.plaque-btn{font-family:'Yeseva One',Georgia,serif !importa
 
 <section>
 <h2>Что тебя ждёт вечером</h2>
-<p class="sub">Три часа внутри истории, где за каждым испытанием стоит свой выбор.<br>Испытания, подвиги, выборы и немного времени, чтобы перевести дух.</p>
+<p class="sub">Три часа внутри истории, где за каждым испытанием стоит свой выбор.</p>
 <div class="path" id="path">
 <div class="path-scroll"><div class="path-track" id="pathtrack">
 <div class="path-line"><svg viewBox="0 0 20 100" preserveAspectRatio="none"><path class="wave-base" d="M10 0 C17 6 17 12 10 18 C3 24 3 30 10 36 C17 42 17 48 10 54 C3 60 3 66 10 72 C17 78 17 84 10 90 C3 94 3 97 10 100"/></svg></div>
@@ -270,13 +299,14 @@ h2,.cond,.hero-title,.plaque-btn{font-family:'Yeseva One',Georgia,serif !importa
 <div class="cal" id="cal"></div>
 </div>
 </section>
+<div class="duo duo-price">
 <section id="hosts" style="max-width:100%">
 <div style="max-width:1080px;margin:0 auto;padding:0 24px">
 <h2>Кто держит круг</h2>
 <p class="sub">Два психолога, которые любят людей, а не лекции.</p>
 <div class="hosts">
-<div class="host"><div class="side"><div class="ava"><img class="photo" src="assets/rukosuev.webp" width="236" height="236" decoding="async" alt="Александр Рукосуев" loading="lazy"></div><div class="hlinks"><div class="hicons"><a href="https://t.me/psy_rukosuev" target="_blank" title="ТГ-канал"><img src="assets/tg.webp" width="44" height="44" decoding="async" alt="TG" loading="lazy"></a><a href="https://www.b17.ru/rukosuev_psy/" target="_blank" title="Профиль b17"><img src="assets/b17.webp" width="44" height="44" decoding="async" alt="b17" loading="lazy"></a></div><a class="hwrite" href="https://t.me/rukosuev_psy" target="_blank">Написать</a></div></div><div class="who"><h3 class="sans">Александр Рукосуев</h3><ul class="reg"><li>Практикующий психолог, гештальт-терапевт (МГИ)</li><li>5 лет в психологии, до этого — IT: объясняет просто</li><li>Ведёт группы и киноклуб; держит так, что комфортно даже молчать</li></ul></div></div>
-<div class="host"><div class="side"><div class="ava"><img class="photo" src="assets/shepelev.webp" width="236" height="295" decoding="async" alt="Евгений Шепелев" style="object-position:50% 15%" loading="lazy"></div><div class="hlinks"><div class="hicons"><a href="https://t.me/ommanipadmehoom" target="_blank" title="ТГ-канал"><img src="assets/tg.webp" width="44" height="44" decoding="async" alt="TG" loading="lazy"></a><a href="https://www.b17.ru/shepelev/" target="_blank" title="Профиль b17"><img src="assets/b17.webp" width="44" height="44" decoding="async" alt="b17" loading="lazy"></a></div><a class="hwrite" href="https://t.me/eashepelev" target="_blank">Написать</a></div></div><div class="who"><h3 class="sans">Евгений Шепелев</h3><ul class="reg"><li>Практикующий психолог, гештальт-терапевт (МГИ)</li><li>4+ года частной практики и групп</li><li>Умеет задать вопрос, после которого всё становится ясно</li></ul></div></div>
+<div class="host"><div class="side"><div class="ava"><img class="photo" src="assets/rukosuev.webp" width="236" height="236" decoding="async" alt="Александр Рукосуев" loading="lazy"></div><div class="hlinks"><div class="hicons"><a href="https://t.me/psy_rukosuev" target="_blank" title="ТГ-канал"><img src="assets/tg.webp" width="44" height="44" decoding="async" alt="TG" loading="lazy"></a><a href="https://www.b17.ru/rukosuev_psy/" target="_blank" title="Профиль b17"><img src="assets/b17.webp" width="44" height="44" decoding="async" alt="b17" loading="lazy"></a></div><a class="hwrite" href="https://t.me/rukosuev_psy" target="_blank">Написать</a></div></div><div class="who"><h3 class="sans">Александр Рукосуев</h3><ul class="reg"><li>Практикующий психолог, гештальт-терапевт</li><li>5 года частной практики и ведения групп</li><li>Ведет так, что комфортно даже молчать</li></ul></div></div>
+<div class="host"><div class="side"><div class="ava"><img class="photo" src="assets/shepelev.webp" width="236" height="295" decoding="async" alt="Евгений Шепелев" style="object-position:50% 15%" loading="lazy"></div><div class="hlinks"><div class="hicons"><a href="https://t.me/ommanipadmehoom" target="_blank" title="ТГ-канал"><img src="assets/tg.webp" width="44" height="44" decoding="async" alt="TG" loading="lazy"></a><a href="https://www.b17.ru/shepelev/" target="_blank" title="Профиль b17"><img src="assets/b17.webp" width="44" height="44" decoding="async" alt="b17" loading="lazy"></a></div><a class="hwrite" href="https://t.me/eashepelev" target="_blank">Написать</a></div></div><div class="who"><h3 class="sans">Евгений Шепелев</h3><ul class="reg"><li>Практикующий психолог, гештальт-терапевт</li><li>5 года частной практики и ведения групп</li><li>Умеет задать вопрос, после которого всё становится ясно</li></ul></div></div>
 </div>
 </div>
 </section>
@@ -287,24 +317,28 @@ h2,.cond,.hero-title,.plaque-btn{font-family:'Yeseva One',Georgia,serif !importa
 <div class="price" style="background:#111;color:#F3EAD8;border-color:#111">
 <img class="money" src="assets/money.webp" width="600" height="338" alt="" loading="lazy" decoding="async">
 <img class="lion" src="assets/group.webp" width="800" height="759" alt="" loading="lazy" decoding="async">
-<h2 class="cond" style="margin:0;font-size:42px;color:#fff">СТОИМОСТЬ УЧАСТИЯ</h2>
-<p class="cond" style="font-size:64px;margin:10px 0;color:#fff">1000р <span style="font-size:15px;font-weight:400;letter-spacing:0;font-family:Montserrat,sans-serif">/ одна встреча</span></p>
+<h2 class="cond" style="margin:0;font-size:21px;color:#fff">СТОИМОСТЬ УЧАСТИЯ</h2>
+<p class="cond" style="font-size:43px;margin:10px 0;color:#fff">1000р <span style="font-size:15px;font-weight:400;letter-spacing:0;font-family:Montserrat,sans-serif">/ одна встреча</span></p>
 <p style="color:#D8CFC0;margin:0">19:00–22:00 • Больничная, 42<br>места ограничены</p>
 <div style="margin-top:16px"><a class="plaque-btn" href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">ЗАПИСАТЬСЯ</a></div>
 </div>
 </section>
 </div>
+</div>
 <section id="project" style="max-width:100%">
 <div style="max-width:1080px;margin:0 auto;padding:20px 24px;text-align:left">
-<h2 style="text-align:left;margin:0 0 10px">О проекте</h2>
-<p class="sans" style="max-width:680px;margin:0 0 14px;color:var(--muted);line-height:1.6">В шуме новостей мы закрываемся в своих комнатах. Без живого контакта — выгорание, тревога, потеря смысла.</p>
-<ul class="reg" style="max-width:680px;margin:0 0 14px;font-size:15px">
-<li>Малая группа, где каждый может высказаться и быть услышанным</li>
-<li>Глубокие разговоры о важном — без лекций и готовых решений</li>
-<li>Гештальт-подход: свои ответы вместо чужих шаблонов</li>
-<li>Уходишь с ясным внутренним компасом и тёплыми знакомствами</li>
-</ul>
-<div><a href="https://t.me/gestalt39" target="_blank" class="sans" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:0;padding:10px 26px 10px 12px;font-weight:700;color:var(--ink);box-shadow:var(--shadow)"><img src="assets/tg-join.webp" width="96" height="97" decoding="async" alt="" style="width:42px;height:42px;border-radius:50%;aspect-ratio:1/1;object-fit:cover">Присоединиться</a></div>
+<h2 style="text-align:left;margin:0 0 18px">О проекте</h2>
+<div class="proj-top">
+<div class="proj-hook"><p class="lead">Можно много знать и всё равно быть скучным собеседником.</p><p>А можно ничего специально не демонстрировать, но после разговора с вами человеку хочется продолжить общение.</p></div>
+<div class="proj-about"><img src="assets/logo-black.webp" width="560" height="135" decoding="async" alt="Кружок" style="width:min(236px,80%);height:auto;display:block;margin:0 0 12px"><p>Мы говорим о важном: о любви, деньгах, свободе, отношениях, выборе, успехе и жизни вообще.</p></div>
+</div>
+<div class="proj-grid">
+<div class="proj-card"><div class="proj-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4.9 12c.7.7 1.2 1.4 1.4 2.3h6.9c.2-.9.7-1.6 1.4-2.3A7 7 0 0 0 12 2z"/></svg></div><h4 class="sans">Говорим о важном</h4><p>Чтобы вам было что сказать, кроме «ну, это зависит от ситуации».</p></div>
+<div class="proj-card"><div class="proj-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg></div><h4 class="sans">Учимся</h4><p>Как рассказывать истории, задавать хорошие вопросы, поддерживать разговор.</p></div>
+<div class="proj-card"><div class="proj-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4 class="sans">Проверяем мысли на людях</h4><p>Спорим, смеёмся и замечаем, что действительно интересно другим.</p></div>
+<div class="proj-card"><div class="proj-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4 class="sans">Получаем обратную связь</h4><p>Не «молодец, было интересно», а понимаем, что именно делает разговор живым.</p></div>
+</div>
+<div class="proj-final"><p>В итоге вы не просто знаете больше. Вы становитесь человеком, с которым хочется продолжать разговор.</p><a href="https://t.me/gestalt39" target="_blank" class="sans" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:var(--red);border:1px solid var(--red-dark);border-radius:0;padding:14px 34px;font-weight:700;color:#fff;box-shadow:var(--shadow)">Присоединиться</a></div>
 </div>
 </section>
 <div class="mapsec" id="contact">
@@ -313,7 +347,7 @@ h2,.cond,.hero-title,.plaque-btn{font-family:'Yeseva One',Georgia,serif !importa
 <div class="mapcard">
 <h2>Наши контакты</h2>
 <p style="font-size:15px">г. Калининград,<br>ул. Больничная, 42, каб. 208</p>
-<p><b>Александр Рукосуев</b><br><span class="big"><a href="tel:+79291696777">8 929 169-67-77</a></span><br><a href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">@rukosuev_psy</a></p>
+<p><b>Александр Рукосуев</b><br><span class="big"><a href="tel:+79291696777">+7 929 169-67-77</a></span><br><a href="https://t.me/rukosuev_psy?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D1%83%D1%8E%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D1%83%20%C2%AB%D0%9A%D1%80%D1%83%D0%B6%D0%BA%D0%B0%C2%BB" target="_blank">@rukosuev_psy</a></p>
 <p><b>Евгений Шепелев</b><br><span class="big"><a href="tel:+79527952360">+7 952 795-23-60</a></span><br><a href="https://t.me/eashepelev" target="_blank">@eashepelev</a></p>
 </div>
 </div>
