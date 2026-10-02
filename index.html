@@ -485,6 +485,11 @@ pdetail.classList.remove(preCls);
 },240);
 }
 psteps.forEach((b)=>b.addEventListener('click',()=>setStep(parseInt(b.dataset.i,10))));
+// свайп по карточке на тачскринах: влево — следующий шаг, вправо — предыдущий
+(function(){var card=document.getElementById('pathdetail');if(!card||!('ontouchstart' in window))return;var sx=null,sy=null;
+card.addEventListener('touchstart',function(e){var t=e.touches[0];sx=t.clientX;sy=t.clientY;},{passive:true});
+card.addEventListener('touchend',function(e){if(sx===null)return;var t=e.changedTouches[0];var dx=t.clientX-sx,dy=t.clientY-sy;sx=sy=null;
+if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){setStep((curStep+(dx<0?1:STEPS.length-1))%STEPS.length);}}, {passive:true});})();
 // фиксируем высоту карточки под самый длинный шаг, чтобы фон не скакал
 function fixPathHeight(){
 if(!pdetail)return;
