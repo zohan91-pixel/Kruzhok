@@ -232,8 +232,8 @@ h2,.cond,.hero-title,.plaque-btn,.proj-hook .lead,.proj-final p,.proj-about .lea
 .proj-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
 .proj-final{padding:12px 0 4px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
 .proj-final p{margin:0;font-size:clamp(15px,2vw,19px);line-height:1.55;max-width:620px;flex:none}
-@media(max-width:800px){.proj-top{grid-template-columns:1fr}.proj-grid{grid-template-columns:1fr 1fr;gap:24px 0}.proj-card+.proj-card{border-left:0}}
-@media(max-width:520px){.proj-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.proj-top{grid-template-columns:1fr}.proj-grid{grid-template-columns:1fr 1fr;gap:24px 0}.proj-card+.proj-card{border-left:0}.proj-card:nth-child(n+3){border-top:1px solid var(--line);padding-top:22px}}
+@media(max-width:520px){.proj-grid{grid-template-columns:1fr;gap:16px}.proj-card+.proj-card{border-top:1px solid var(--line);padding-top:22px}}
 .duo{position:relative;isolation:isolate}
 .duo::before{content:"";position:absolute;inset:0;background-position:center top;background-size:cover;background-repeat:no-repeat;z-index:-1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(180deg,transparent,#000 4%,#000 96%,transparent)}
 #about{position:relative;isolation:isolate}
@@ -262,7 +262,7 @@ h2,.cond,.hero-title,.plaque-btn,.proj-hook .lead,.proj-final p,.proj-about .lea
 </div>
 <section id="about">
 <div style="max-width:1080px;margin:0 auto;padding:0 24px">
-<h2>Это для тебя, если…</h2>
+<h2>Это для вас, если…</h2>
 <div class="fates">
 <div class="fate"><img src="data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwBACdASoYACQAPxF6tFIsJ6UiqqoBgCIJZwDQVA/o5VlKGBjk/reUe/HqanbWGhgA/uMvLfIcTzqKa+ghSddpqJWESwfVJVwPKJrX5wu7ikBXAofL5XSY+TTOXbwAAAA=" data-src="assets/fate-1.webp" class="blurup" alt="" loading="lazy" decoding="async" width="500" height="750"><p>Вы знаете, чего хотите, но раз за разом что-то останавливает прямо перед результатом</p></div>
 <div class="fate"><img src="data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBQCdASoYACQAPxF2slAsJ6SisAgBgCIJZQDO7BhyxAYdEnwVnGfKjYzQl1YfhcAAAP7jScXIeonheqNhJ8BAGOwBB94u6l6r10+4Pw0KbbiTjHes7j/tTgYWstycJKHNMAZ54h+RDAAA" data-src="assets/fate-2.webp" class="blurup" alt="" loading="lazy" decoding="async" width="500" height="750"><p>Есть ощущение, что вы можете больше, но что-то держит, и непонятно что</p></div>
@@ -330,7 +330,7 @@ h2,.cond,.hero-title,.plaque-btn,.proj-hook .lead,.proj-final p,.proj-about .lea
 <h2 style="text-align:left;margin:0 0 18px">О проекте</h2>
 <div class="proj-top">
 <div class="proj-hook"><p class="lead">Можно много знать и всё равно быть скучным собеседником.</p><p>А можно ничего специально не демонстрировать, но после разговора с вами человеку хочется продолжить общение.</p></div>
-<div class="proj-about"><img src="assets/logo-black.webp" width="560" height="135" decoding="async" alt="Кружок" style="width:min(236px,80%);height:auto;display:block;margin:0 0 12px"><p>Мы говорим о важном: о любви, деньгах, свободе, отношениях, выборе, успехе и жизни вообще.</p></div>
+<div class="proj-about"><img src="assets/logo-black.webp" width="560" height="135" decoding="async" alt="Кружок" style="width:min(157px,60%);height:auto;display:block;margin:15px 0 14px"><p>Мы говорим о важном: о любви, деньгах, свободе, отношениях, выборе, успехе и жизни вообще.</p></div>
 </div>
 <div class="proj-grid">
 <div class="proj-card"><div class="proj-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4.9 12c.7.7 1.2 1.4 1.4 2.3h6.9c.2-.9.7-1.6 1.4-2.3A7 7 0 0 0 12 2z"/></svg></div><h4 class="sans">Говорим о важном</h4><p>Чтобы вам было что сказать, кроме «ну, это зависит от ситуации».</p></div>
